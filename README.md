@@ -9,6 +9,7 @@ Welcome to the Sample Apps and Proof of Concept (POC) Code Repository! This repo
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
+- [Changelog](#changelog)
 
 ## Introduction
 
@@ -31,3 +32,16 @@ To use the sample apps and POC code provided in this repository, follow these st
 1. **Clone the Repository**: Clone this repository to your local machine using Git.
    ```bash
    git clone https://github.com/noncent/poc.git
+   ```
+
+## Changelog
+
+### [1.0.0] - 17 March 2024 - fetch-geolocation
+
+#### Added
+- HTML, CSS, and JS proof of concept (POC) to demonstrate fetching user's location, IP address, postal code, country, state, city, and address.
+- Integration with free-to-use APIs for fetching location information.
+- Creation of a map based on the fetched location information.
+
+#### Notes
+- All APIs used in the POC are free to use, but may require additional configurations or connections in case of reaching usage limits.
