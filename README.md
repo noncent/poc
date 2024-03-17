@@ -36,12 +36,13 @@ To use the sample apps and POC code provided in this repository, follow these st
 
 ## Changelog
 
-### [1.0.0] - 17 March 2024 - fetch-geolocation [DEMO](https://htmlpreview.github.io/?https://github.com/noncent/poc/blob/main/fetch-gelocation/index.html)
+### [1.0.0] - 17 March 2024 - fetch-geolocation
 
 #### Added
 - HTML, CSS, and JS proof of concept (POC) to demonstrate fetching user's location, IP address, postal code, country, state, city, and address.
 - Integration with free-to-use APIs for fetching location information.
 - Creation of a map based on the fetched location information.
+- Pease check the [DEMO](https://htmlpreview.github.io/?https://github.com/noncent/poc/blob/main/fetch-gelocation/index.html)
 
 #### Notes
 - All APIs used in the POC are free to use, but may require additional configurations or connections in case of reaching usage limits.
