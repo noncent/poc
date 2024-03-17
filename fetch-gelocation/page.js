@@ -18,6 +18,7 @@ function Geolocation() {
     this.pleaseWait =
         '<div class="progress-bar progress-bar-animated progress-bar-striped bg-primary" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">Please wait...</div>';
 }
+
 // Method to show progress bar
 Geolocation.prototype.showProgress = function (el) {
     if (el) {
@@ -33,6 +34,7 @@ Geolocation.prototype.showProgress = function (el) {
         this.elements.progress.style.display = "none";
     }
 };
+
 // Method to hide progress bar and clear interval
 Geolocation.prototype.hideProgress = function () {
     // Hide progress bar
@@ -40,6 +42,7 @@ Geolocation.prototype.hideProgress = function () {
     // Clear the interval
     clearInterval(this.progressTracking);
 };
+
 // Method to fetch user's current location
 Geolocation.prototype.fetchLocation = function () {
     var self = this;
@@ -58,6 +61,7 @@ Geolocation.prototype.fetchLocation = function () {
         console.log("Geolocation is not supported by this browser.");
     }
 };
+
 // Function to fetch IP address from api.ipify.org
 Geolocation.prototype.fetchIp = function (url) {
     if (typeof url == 'undefined') {
@@ -70,6 +74,7 @@ Geolocation.prototype.fetchIp = function (url) {
             return this.fetchIp("https://ipinfo.io/json");
         });
 }
+
 // Method to callback function to display the user's location
 Geolocation.prototype.showPosition = function (position) {
     // Start the interval
@@ -112,6 +117,7 @@ Geolocation.prototype.showPosition = function (position) {
             console.log("Error fetching IP address:", error);
         });
 };
+
 // Method to create OpenStreetMap
 Geolocation.prototype.createOpenMap = function (data) {
     // Initialize the map
@@ -140,8 +146,10 @@ Geolocation.prototype.createOpenMap = function (data) {
     map.setView(latlng, 13);
     L.marker(latlng).addTo(map);
 };
+
 // Create an instance of Geolocation
 var geo = new Geolocation();
+
 // Function to fetch location
 function fetchLocation() {
     geo.fetchLocation();
