@@ -1,3 +1,10 @@
+// load external js
+function loadScript(url, callback) {
+    var script = document.createElement('script');
+    script.src = url;
+    script.onload = callback;
+    document.body.appendChild(script);
+}
 // Define Geolocation class
 function Geolocation() {
     // Initialize properties
@@ -146,6 +153,9 @@ Geolocation.prototype.createOpenMap = function (data) {
     map.setView(latlng, 13);
     L.marker(latlng).addTo(map);
 };
+
+// load open map lib
+loadScript('https://unpkg.com/leaflet/dist/leaflet.js');
 
 // Create an instance of Geolocation
 var geo = new Geolocation();
